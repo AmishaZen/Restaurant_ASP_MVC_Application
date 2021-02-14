@@ -1,0 +1,36 @@
+﻿@model IEnumerable<RestaurantEFDbFirstApproachCRUD.Models.Restaurant>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Restaurant List</h2>
+<br />
+<a href="/Restaurant/AddRecord" class="btn btn-primary">Add Restaurant</a>
+
+<br />
+<form class="form-inline" action="/Restaurant/Index">
+    <label for="search">SearchRestaurant</label>
+    <input type="text" class="form-control" name="search" id="search" placeholder="Enter Restaurant Name"/>
+   <button class="btn btn-info">Search</button>
+</form>
+<br />
+
+<table class="table">
+    <tr>
+        <th style="font-weight:bold; font-size:20px;">Restaurant Name</th>
+        <th>Cusines</th>
+        <th>Show</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+    <td><a href="/Restaurant/ShowDetails/@item.RestaurantId">@item.RestaurantName</a></td>
+    <td><a href="">@item.Cusine</a></td>
+    <td><a href="/Restaurant/ShowDetails/@item.RestaurantId"class="btn btn-info">ShowDeatils</a></td>
+    <td><a href="/Restaurant/UpdateRecord/@item.RestaurantId" class="btn btn-primary">Edit</a></td>
+    <td><a href="/Restaurant/Delete/@item.RestaurantId" class="btn btn-danger">Delete</a></td>
+    </tr>
+    }
+</table>

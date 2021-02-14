@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WFA3DotNetModelStoreContainer" CdmEntityContainer="WFA3DotNetEntities">
+    <EntitySetMapping Name="Restaurants">
+      <EntityTypeMapping TypeName="WFA3DotNetModel.Restaurant">
+        <MappingFragment StoreEntitySet="Restaurant">
+          <ScalarProperty Name="RestaurantId" ColumnName="RestaurantId" />
+          <ScalarProperty Name="RestaurantName" ColumnName="RestaurantName" />
+          <ScalarProperty Name="Cusine" ColumnName="Cusine" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

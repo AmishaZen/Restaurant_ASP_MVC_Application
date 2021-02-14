@@ -1,0 +1,34 @@
+﻿@model RestaurantEFDbFirstApproachCRUD.Models.Restaurant
+@{
+    ViewBag.Title = "UpdateRecord";
+}
+
+<h2>UpdateRecord</h2>
+
+<form action="/Restaurant/UpdateRecord/@Model.RestaurantId" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-10">
+            <input type="hidden" name="RestaurantId" value="@Model.RestaurantId" />
+            <label for="RestaurantName">Restaurant Name</label>
+            <input type="text" name="RestaurantName" class="form-control" id="RestaurantName" value="@Model.RestaurantName" />
+        </div><br />
+              <div class="form-group col-md-10">
+                  <label for="Cusine">Cusine</label>
+                  @*<input type="text" name="Cusine" class="form-control" id="Cusine" value="@Model.Cusine" />*@
+                  <select class="form-control" id="Cusine" name="Cusine">
+                      {
+                      <option value="">Please Select DeptId</option>
+                      <option value="Indian">Indian</option>
+                      <option value="Italian">Italian</option>
+                      <option value="French">French</option>
+                      }
+                  </select>
+              </div>
+
+        <div class="form-group col-md-6">
+            <button type="submit" class="btn btn-success">Edit Restaurant</button>
+            <a class="btn btn-info" href="/Restaurant/Index">Cancel</a>
+        </div>
+    </div>
+   
+</form>

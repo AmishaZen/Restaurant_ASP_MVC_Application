@@ -1,0 +1,35 @@
+﻿@model RestaurantEFDbFirstApproachCRUD.Models.Restaurant
+@{
+    ViewBag.Title = "ShowDetails";
+}
+
+<style>
+    th,td
+    {
+        font-size:20px;
+        font-family:'Times New Roman';
+
+    }
+    h2 {
+        font-size: 30px;
+        font-family: 'Times New Roman';
+        color:brown;
+    }
+</style>
+
+<h2>Show Restaurant Details</h2>
+
+<br />
+<table class="table col-md-2">
+    <tr>
+        <th>Restaurant Name</th>
+        <td>@Model.RestaurantName</td>
+    </tr>
+    <tr>
+        <th>Cusine</th>
+        <td>@Model.Cusine</td>
+    </tr>
+    
+</table>
+
+<a href="/Restaurant/Index" class="btn btn-info">Back</a>

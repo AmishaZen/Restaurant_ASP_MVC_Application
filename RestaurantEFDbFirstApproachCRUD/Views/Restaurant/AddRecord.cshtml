@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "AddRecord";
+}
+
+<h2>AddRecord</h2>
+
+<form action="/Restaurant/AddRecord" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-10">
+            <label for="RestaurantName">Restaurant Name</label>
+            <input type="text" name="RestaurantName" class="form-control" id="RestaurantName" placeholder="Restaurant Name" />
+        </div><br />
+        <div class="form-group col-md-11">
+            <label for="Cusine">Cusine</label>
+            <select class="form-control" id="Cusine" name="Cusine">
+                {
+                <option value="">Please Select DeptId</option>
+                <option value="Indian">Indian</option>
+                <option value="Italian">Italian</option>
+                <option value="French">French</option>
+                }
+            </select>
+        </div>
+        <div class="form-group col-md-10">
+            <button type="submit" class="btn btn-success">Add Restaurant Details</button>
+            <a href="/Restaurant/Index" class="btn btn-danger">Cancel</a>
+        </div><br />
+        
+    </div>
+    <br />
+   
+</form>
